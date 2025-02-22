@@ -93,6 +93,25 @@ let mod = {
 
 		})
 
+		app.post('/deleteEmails', (req, res) => {
+
+			const json = req.body;
+
+			try {
+
+				db.prepare("DELETE FROM mail WHERE recipient = ?").run(json.address);
+				return res.status(200).send("done");
+
+			} catch(err) {
+
+				console.log("DB delete address fail")
+				console.log(err)
+
+			}
+
+		})
+
+
 
 		app.post('/mails', (req, res) => {
 

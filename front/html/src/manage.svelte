@@ -78,6 +78,28 @@
 
 	}
 
+	function deleteEmails(){
+
+		dialog.conf("Delete all emails from this address ?", (res) => {
+
+			if(res){
+
+				f.fetchPost('./deleteEmails', {address: selectedAddress}, (data) => {
+
+					if(data == "done"){
+
+						dialog.alrt("Done")
+
+					}	
+
+				});
+
+			}
+
+		})
+
+	}
+
 	onMount(() => {
 
 		refreshAddress();
@@ -94,7 +116,7 @@
 		<div></div>
 
 		<!--New mails-->
-		<span>New mail address</span>
+		<span>New address</span>
 		<div class="adaptWidthSmall" style="display: flex; flex-wrap: wrap">
 
 			<input bind:value={newAddressText} placeholder="New address" style="flex: 1">
@@ -125,10 +147,9 @@
 
 		<!--Delete selected address-->
 		<button disabled={addresses.length == 0} on:click={deleteAddress} class="adaptWidthSmall">Delete this address</button>
+		<button disabled={addresses.length == 0} on:click={deleteEmails} class="adaptWidthSmall">Delete all emails from this address</button>
 		<div style="flex: 1"></div>
-
 			<button on:click={()=>{window.location.replace('/')}} class="adaptWidthSmall" style="justify-content: flex-end">Back</button>
-
 		<div></div>
 
 	</div>

@@ -3,7 +3,7 @@ let dialogConfString = `
 
 	<div id="dialogBox" style="width: min(300px, calc(100% - 40px)); box-sizing: border-box; padding: 10px; min-height: 50px; display: flex; flex-direction: column; align-items: center; gap: 10px">
 
-		<span id="dialogBoxText"></span>
+		<span id="dialogBoxText" style="text-align: center;"></span>
 
 		<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
 			<button id="dialogBoxYesButton" onclick="dialogConfirmYesClicked()" style="width: 100px" tabindex="0">Yes</button>
@@ -20,7 +20,7 @@ let dialogAlertString = `
 
 	<div id="dialogBox" style="width: min(300px, calc(100% - 40px)); box-sizing: border-box; padding: 10px; min-height: 50px; display: flex; flex-direction: column; align-items: center; gap: 10px">
 
-		<span id="dialogBoxText"></span>
+		<span id="dialogBoxText" style="text-align: center;"></span>
 
 		<div>
 			<button id="dialogBoxOkButton" onclick="dialogAlertOkClicked()" style="width: 100px" tabindex="0">OK</button>

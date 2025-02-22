@@ -28,6 +28,9 @@ The http server will be listening on port 80. Make sure that your port 25 is acc
 
 In the `docker-compose.yaml` file, port `25:25` is mapped by default. It is recommended to not change this setting if you are using a reverse proxy as some of them cannot forward smtp packets
 
+# Configurations
+You can edit `config.json` inside `data/config.json` to change the mail refresh interval and number of emails shown per page
+
 # Adding TLS / Encryption (optional) 🔒
 copy your certificate and private key files into the `data` folder (usually, the file extensions are `.crt` and `.key`). The file name and extension don't actually matter as Nortix Mail can automatically detect which one is which
 

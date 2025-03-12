@@ -30,6 +30,7 @@
 		
 		page = 1;
 		refreshMails();
+		localStorage.setItem("address", selectedAddress);
 
 	}
 
@@ -157,6 +158,13 @@
 					refreshMails();
 				
 				}, data.refreshInterval*1000);
+
+			}
+
+			let lastSelectedAddress = localStorage.getItem("address");
+			if (lastSelectedAddress !== null && addresses.some(address => address.addr == lastSelectedAddress)) {
+
+				selectedAddress = lastSelectedAddress;
 
 			}
 

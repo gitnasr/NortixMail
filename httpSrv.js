@@ -1,5 +1,6 @@
 "use strict";
 import express from 'express'
+import compression from 'compression'
 import config from './config.js'
 
 let mod = {
@@ -9,6 +10,7 @@ let mod = {
 		const app = express();
 
 		app.use(express.json());
+		app.use(compression());
 		app.use(express.static('./front/html/dist'));
 
 		app.get('/', (_req, res) => {

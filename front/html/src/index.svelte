@@ -150,21 +150,20 @@
 			addresses = data.addresses;
 			if (data.addresses.length > 0){
 
-				selectedAddress = data.addresses[data.addresses.length-1].addr;
-				refreshMails();
+				selectedAddress = addresses[data.addresses.length-1].addr;
+				let lastSelectedAddress = localStorage.getItem("address");
+				if (lastSelectedAddress !== null && addresses.some(address => address.addr == lastSelectedAddress)) {
 
+					selectedAddress = lastSelectedAddress;
+
+				}
+
+				refreshMails();
 				setInterval(() => {
 					
 					refreshMails();
 				
 				}, data.refreshInterval*1000);
-
-			}
-
-			let lastSelectedAddress = localStorage.getItem("address");
-			if (lastSelectedAddress !== null && addresses.some(address => address.addr == lastSelectedAddress)) {
-
-				selectedAddress = lastSelectedAddress;
 
 			}
 

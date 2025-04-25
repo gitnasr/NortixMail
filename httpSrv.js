@@ -163,6 +163,10 @@ let mod = {
 
 		})
 
+		app.use((err, req, res, next) => {
+			console.error(err)
+		});
+
 		app.listen(port, () => {
 			console.log('http server listening at port: ' + port);	
 		})

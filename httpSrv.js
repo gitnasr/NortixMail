@@ -13,12 +13,6 @@ let mod = {
 		app.use(compression());
 		app.use(express.static('./front/html/dist'));
 
-		app.get('/', (_req, res) => {
-
-			res.redirect('/index.html');
-
-		})
-
 		let refreshInterval = config.getConfig("MailRefreshInterval");
 		app.post('/addresses', (_req, res) => {
 

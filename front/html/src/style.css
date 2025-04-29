@@ -1,8 +1,9 @@
 button {
 	
 	border-radius: 7px;
-	background-color: rgb(25,25,25);
-	color: rgb(255,255,255);
+	outline: 1px solid black;
+	background: rgb(0,0,0,0);
+	color: rgb(0,0,0);
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border: none;
@@ -12,15 +13,15 @@ button {
 #dialogBox {
 
 	background-color: rgb(255,255,255);
+	border-radius: 7px;
 
 }
-
 
 input, select {
 
 	border-radius: 7px;
+	outline: 1px solid black;
 	border: none;
-	background-color: rgb(215, 215, 215);
 
 }
 
@@ -52,6 +53,7 @@ select:hover {
 
 	background-color: transparent;
 	color: rgb(12,12,12);
+	outline: none
 
 }
 
@@ -73,21 +75,18 @@ select:hover {
 
 	button {
 
-		background-color: rgb(230,230,230);
-		color: rgb(0,0,0);
+		color: rgb(255, 255, 255);
+		outline: 1px solid white;
 
 	}
 
 	input, select {
 
-		background-color: rgb(40, 40, 40);
-		color: rgb(255, 255, 255);
-
-	}
-
-	input::placeholder {
-
-		color: rgb(138, 138, 138);
+		border-radius: 7px;
+		outline: 1px solid white;
+		background-color: rgb(15,15,15);
+		color: white;
+		border: none;
 
 	}
 

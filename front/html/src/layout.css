@@ -93,7 +93,6 @@ span {
 #mailList {
 
 	flex: 1;
-	outline: 1px solid black;
 	height: 100%;
 
 	box-sizing: border-box;

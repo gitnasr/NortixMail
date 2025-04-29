@@ -1,5 +1,5 @@
-import './layout.css'
 import './style.css'
+import './layout.css'
 import App from './manage.svelte'
 
 const app = new App({

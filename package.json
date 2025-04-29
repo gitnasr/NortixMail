@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon main.js"
+    "dev": "concurrently --kill-others \"nodemon main.js\" \"npm --prefix ./front run dev\""
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "nodemon": "^3.1.7"
   }
 }

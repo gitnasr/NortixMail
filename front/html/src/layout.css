@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'globalFont'; /* Name to use in CSS */
-    src: url('/nunito.ttf') format('truetype'); /* Path to the font file */
+    src: url('/roboto.ttf') format('truetype'); /* Path to the font file */
 	font-weight: 500;
 }
 

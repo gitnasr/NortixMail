@@ -10,4 +10,4 @@ let db = database.init();
 let domainName = domain.getDomainName();
 
 smtpSrv.start(db, 25);
-httpSrv.start(db, domainName, 80);
+httpSrv.start(db, domainName, 7273);
